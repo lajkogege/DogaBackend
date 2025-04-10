@@ -11,4 +11,4 @@ Route::get('/user', function (Request $request) {
 Route::get('/tevekenysegek', [TevekenysegekContoller::class, 'index']);
 Route::post('/tevekenyseg',[TevekenysegekContoller::class, 'store']);
 Route::delete('/tevekenyseg/{id}',[TevekenysegekContoller::class,'destroy']);
-Route::put('tevekenyseg/{id}', [TevekenysegekContoller::class,'']);
+Route::put('tevekenyseg/{id}', [TevekenysegekContoller::class,'update']);

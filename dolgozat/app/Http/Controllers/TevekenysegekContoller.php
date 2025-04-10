@@ -28,4 +28,12 @@ public function destroy($id){
     Tevekenysegek::find($id)->delete();
 }
 
+
+public function update(Request $request, $id){
+    $tevekenysegek= Tevekenysegek::find($id);
+    $tevekenysegek->kat_id=$request->id;
+    $tevekenysegek->tev_nev=$request->tev_nev;
+    $tevekenysegek->allapot= $request->allapot;
+    $tevekenysegek->save();
+}
 }
